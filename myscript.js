@@ -16,13 +16,13 @@ const prezzoOver = ( 1 - 0.4 ) * prezzoIntero
 
 
 if ( isNaN (km) || isNaN (eta) || km < 0 || eta < 0) {
-    console.log ( "C'è un errore di scrittura dei dati" )
+    document.getElementById ("my_JScontent") .innerHTML = "C'è un errore di scrittura dei dati"
 } else {
     if ( eta > 17 && eta < 64 ) {
-        console.log ( "Il tuo biglietto viene " + prezzoIntero + "€" )
+        document.getElementById ("my_JScontent") .innerHTML = "Il tuo biglietto viene " + prezzoIntero + "€"
     } else if ( eta <= 17 ) {
-        console.log ( "Sei minorenne! Il tuo biglietto è scontato del 20%! Il prezzo finale è di " + prezzoMinorenni + "€" )
+        document.getElementById ("my_JScontent") .innerHTML = "Sei minorenne! Il tuo biglietto è scontato del 20%! Il prezzo finale è di " + prezzoMinorenni + "€"
     } else {
-        console.log ( "Sei over 65! Il tuo biglietto è scontato del 40%! Il prezzo finale è di " + prezzoOver + "€" )
+        document.getElementById ("my_JScontent") .innerHTML = "Sei over 65! Il tuo biglietto è scontato del 40%! Il prezzo finale è di " + prezzoOver + "€"
     }
 }
