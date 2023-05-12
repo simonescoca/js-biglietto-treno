@@ -19,10 +19,10 @@ if ( isNaN (km) || isNaN (eta) || km < 0 || eta < 0) {
     document.getElementById ("my_JScontent") .innerHTML = "C'è un errore di scrittura dei dati"
 } else {
     if ( eta > 17 && eta < 64 ) {
-        document.getElementById ("my_JScontent") .innerHTML = "Il tuo biglietto viene " + prezzoIntero + "€"
+        document.getElementById ("my_JScontent") .innerHTML = "Il tuo biglietto viene " + prezzoIntero.toFixed(2) + "€"
     } else if ( eta <= 17 ) {
-        document.getElementById ("my_JScontent") .innerHTML = "Sei minorenne! Il tuo biglietto è scontato del 20%! Il prezzo finale è di " + prezzoMinorenni + "€"
+        document.getElementById ("my_JScontent") .innerHTML = "Sei minorenne! Il tuo biglietto è scontato del 20%! Il prezzo finale è di " + prezzoMinorenni.toFixed(2) + "€"
     } else {
-        document.getElementById ("my_JScontent") .innerHTML = "Sei over 65! Il tuo biglietto è scontato del 40%! Il prezzo finale è di " + prezzoOver + "€"
+        document.getElementById ("my_JScontent") .innerHTML = "Sei over 65! Il tuo biglietto è scontato del 40%! Il prezzo finale è di " + prezzoOver.toFixed(2) + "€"
     }
 }
